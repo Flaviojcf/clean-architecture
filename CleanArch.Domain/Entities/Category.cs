@@ -4,9 +4,8 @@ using System.Collections.Generic;
 
 namespace CleanArch.Domain.Entities
 {
-    public sealed class Category
+    public sealed class Category : BaseEntity
     {
-        public int Id { get; private set; }
         public string Name { get; private set; }
 
         public Category(string name)
@@ -18,6 +17,11 @@ namespace CleanArch.Domain.Entities
         {
             DomainExceptionValidation.When(id < 0, "Invalid id value");
             Id = id;
+            ValidateDomain(name);
+        }
+
+        public void Update(string name)
+        {
             ValidateDomain(name);
         }
 

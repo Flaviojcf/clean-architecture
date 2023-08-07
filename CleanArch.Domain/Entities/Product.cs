@@ -17,7 +17,7 @@ namespace CleanArch.Domain.Entities
 
         public Product(int id, string name, string description, decimal price, int stock, string image)
         {
-            DomainExceptionValidation.When(id < 0, "Invalid Id value");
+            DomainExceptionValidation.When(id < 0, "Invalid Id value.");
             ValidateDomain(name, description, price, stock, image);
         }
 

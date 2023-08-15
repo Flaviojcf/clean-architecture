@@ -12,8 +12,8 @@ namespace CleanArch.Domain.Interfaces
         Task<IEnumerable<Product>> GetProducts();
         Task<Product> GetById (int id);
         Task<Product> GetProductByCategory(int id);
-        Task<Product> CreateCategory(Product product);
-        Task<Product> UpdateCategory(Product product);
-        Task<Product> DeleteCategory(Product product);
+        Task<Product> CreateProduct(Product product);
+        Task<Product> UpdateProduct(Product product);
+        Task<Product> DeleteProduct(Product product);
     }
 }

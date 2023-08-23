@@ -30,7 +30,7 @@ namespace CleanArch.Application.Products.Handlers
             }
             else
             {
-                var result = await _productRepository.DeleteProduct(product;
+                var result = await _productRepository.DeleteProduct(product);
 
                 return result;
             }

@@ -3,11 +3,11 @@ using MediatR;
 
 namespace CleanArch.Application.Products.Queries
 {
-    public class GetProductByIdQuery : IRequest<Product>
+    public class GetProductsQueryById : IRequest<Product>
     {
         public int Id { get; set; }
 
-        public GetProductByIdQuery(int id)
+        public GetProductsQueryById(int id)
         {
             Id = id;
         }

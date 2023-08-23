@@ -9,12 +9,12 @@ namespace CleanArch.Application.Products.Commands
 
         public string Description { get; set; }
 
-        public string Price { get; set; }
+        public decimal Price { get; set; }
 
-        public string Stock { get; set; }
+        public int Stock { get; set; }
 
         public string Image { get; set; }
         
-        public string CategoryId { get; set; }
+        public int CategoryId { get; set; }
     }
 }

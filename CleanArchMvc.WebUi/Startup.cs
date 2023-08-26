@@ -1,3 +1,4 @@
+using CleanArch.Domain.Account;
 using CleanArch.Infra.IOC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -29,7 +30,8 @@ namespace CleanArchMvc.WebUi
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,
+                    ISeedUserRoleInitial seedUserRoleInitial)
         {
             if (env.IsDevelopment())
             {
@@ -45,6 +47,12 @@ namespace CleanArchMvc.WebUi
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            seedUserRoleInitial.SeedRoles();
+
+            seedUserRoleInitial.SeedUsers();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

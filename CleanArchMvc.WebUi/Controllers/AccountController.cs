@@ -1,5 +1,5 @@
 ﻿using CleanArch.Domain.Account;
-using CleanArchMvc.WebUI.ViewModel;
+using CleanArchMvc.WebUI.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 

@@ -8,4 +8,12 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArch.Infra.IOC\CleanArch.Infra.IOC.csproj" />
+  </ItemGroup>
+
 </Project>

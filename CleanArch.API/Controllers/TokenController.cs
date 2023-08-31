@@ -26,6 +26,7 @@ namespace CleanArchMvc.API.Controllers
         }
 
         [HttpPost("CreateUser")]
+        [ApiExplorerSettings(IgnoreApi = true)]
         public async Task<ActionResult> CreateUser([FromBody] LoginModel loginModel)
         {
             var result = await _authentication.RegisterUser(loginModel.Email, loginModel.Password);

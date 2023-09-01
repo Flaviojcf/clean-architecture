@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace CleanArch.API.Controllers
 {
-    [EnableCors("AllowAll")]
+
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]

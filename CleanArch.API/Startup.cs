@@ -27,18 +27,7 @@ namespace CleanArch.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddCors(options =>
-            {
-                options.AddPolicy("AllowAll",
-                    builder =>
-                    {
-                        builder
-                        .AllowAnyOrigin()
-                        .AllowAnyMethod()
-                        .AllowAnyHeader();
-                    });
-            });
+            services.AddCors();
 
             services.AddInfrastructureAPI(Configuration);
 
@@ -64,7 +53,7 @@ namespace CleanArch.API
             app.UseStatusCodePages();
 
             app.UseRouting();
-            app.UseCors("AllowAll");
+            app.UseCors(option => option.AllowAnyOrigin()); ;
             app.UseAuthentication();
             app.UseAuthorization();
 

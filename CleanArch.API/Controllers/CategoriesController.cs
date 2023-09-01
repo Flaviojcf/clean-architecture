@@ -1,15 +1,17 @@
 ﻿using CleanArch.Application.DTOs;
 using CleanArch.Application.Interfaces;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace CleanArch.API.Controllers
 {
+    [EnableCors("AllowAll")]
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CategoriesController : ControllerBase
     {
         private readonly ICategoryService _categoryService;
